@@ -7,7 +7,7 @@ const FormInput = ({ handleChange, label, ...otherProps }) => {
     <div className="group">
       <input
         className="form-input"
-        autocomplete="off"
+        autoComplete="off"
         onChange={handleChange}
         {...otherProps}
       />
