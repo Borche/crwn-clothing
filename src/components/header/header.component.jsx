@@ -29,6 +29,7 @@ const Header = ({ currentUser }) => {
           </Link>
         )}
       </div>
+      {currentUser ? `Logged in as ${currentUser.displayName}` : null}
     </div>
   );
 };
