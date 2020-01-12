@@ -26,9 +26,10 @@ class App extends React.Component {
             ...snapshot.data()
           });
         });
+      } else {
+        // Andreas idea to put this is an else statement
+        setCurrentUser(user);
       }
-
-      setCurrentUser(user);
     });
   }
 
