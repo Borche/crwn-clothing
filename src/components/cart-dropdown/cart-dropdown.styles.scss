@@ -10,6 +10,13 @@
   top: 90px;
   right: 40px;
   z-index: 5;
+  transition: all 0.25s, transform 0s;
+  overflow: visible;
+
+  .empty-message {
+    font-size: 18px;
+    margin: 50px auto;
+  }
 
   .cart-items {
     height: 240px;
@@ -20,5 +27,13 @@
 
   button {
     margin-top: auto;
+  }
+
+  &--hidden {
+    transform: translateY(-500px);
+    transition: all 0.25s, transform 0s 0.25s;
+    overflow: hidden;
+    height: 1px;
+    opacity: 0;
   }
 }
