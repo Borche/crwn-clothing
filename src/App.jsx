@@ -22,9 +22,7 @@ class App extends React.Component {
     checkUserSession();
   }
 
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  }
+  componentWillUnmount() {}
 
   render() {
     return (

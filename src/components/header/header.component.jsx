@@ -3,13 +3,18 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
-import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
-import { HeaderContainer, LogoContainer, OptionsContainer, OptionDiv, OptionLink } from './header.styles';
+import {
+  HeaderContainer,
+  LogoContainer,
+  OptionsContainer,
+  OptionDiv,
+  OptionLink
+} from './header.styles';
 
 const Header = ({ currentUser, hidden, signOutStart }) => {
   return (
@@ -18,7 +23,9 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
         <Logo className="logo"></Logo>
       </LogoContainer>
       <OptionsContainer>
-        {currentUser ? <span style={{ marginRight: '20px' }}>Logged in as {currentUser.displayName}</span> : null}
+        {currentUser ? (
+          <span style={{ marginRight: '20px' }}>Logged in as {currentUser.displayName}</span>
+        ) : null}
         <OptionLink to="/shop">SHOP</OptionLink>
         <OptionLink to="/shop">CONTACT</OptionLink>
         {currentUser ? (
